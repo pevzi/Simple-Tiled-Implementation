@@ -879,7 +879,7 @@ function Map:drawObjectLayer(layer)
 	end
 
 	for _, object in ipairs(layer.objects) do
-		if object.shape == "rectangle" then
+		if object.shape == "rectangle" and not object.gid then
 			drawShape(object.rectangle, "rectangle")
 		elseif object.shape == "ellipse" then
 			drawShape(object.ellipse, "ellipse")
